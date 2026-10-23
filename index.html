@@ -4,71 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f8f4eb">
-    <title>Maqsadbek & Dilafruz — To‘y taklifnomasi</title>
+    <meta name="theme-color" content="#f8f3e9">
+    <meta name="description" content="Maqsad va Dilafruzning nikoh to'yiga taklifnoma">
+    <title>Maqsadbek & Dilafruz — Wedding Invitation</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="sytle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- MUSIQA: audio/ordinary.mp3 faylini joylashtiring -->
+    <audio id="weddingMusic" loop preload="none">
+        <source src="audio/ordinary.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- KONVERT OCHILISHI -->
-    <section class="envelope-screen" id="envelopeScreen">
-        <div class="envelope-decoration decoration-one">✿</div>
-        <div class="envelope-decoration decoration-two">❦</div>
+    <section class="intro-screen" id="introScreen">
+        <div class="intro-glow"></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
 
-        <div class="envelope-scene" id="envelopeScene">
-            <p class="small-label">SIZ UCHUN MAXSUS TAKLIF</p>
+        <span class="floating flower flower-one">✿</span>
+        <span class="floating flower flower-two">❀</span>
+        <span class="floating flower flower-three">✧</span>
+        <span class="floating flower flower-four">❦</span>
 
-            <div class="envelope" id="envelope"
-                 role="button" tabindex="0"
-                 aria-label="Taklifnomani ochish">
+        <div class="intro-content" id="introContent">
+            <div class="intro-brand">A SPECIAL INVITATION</div>
+            <div class="intro-star">✦</div>
 
-                <div class="envelope-back"></div>
+            <p class="intro-subtitle">SIZ UCHUN TAYYORLANDI</p>
 
-                <div class="letter">
-                    <span class="letter-top">NIKOH TO‘YI</span>
+            <button class="envelope-button" id="openEnvelope"
+                    aria-label="Taklifnomani ochish">
+                <span class="envelope-shadow"></span>
+                <span class="envelope-back"></span>
+
+                <span class="letter">
+                    <span class="letter-small">NIKOH TO‘YI</span>
                     <span class="letter-names">Maqsadbek <i>&</i> Dilafruz</span>
-                    <span class="letter-date">SIZNI KUTAMIZ</span>
-                    <span class="letter-flower">✿</span>
-                </div>
+                    <span class="letter-date">14 · 11 · 2026</span>
+                    <span class="letter-ornament">❦</span>
+                </span>
 
-                <div class="envelope-left"></div>
-                <div class="envelope-right"></div>
-                <div class="envelope-front"></div>
-                <div class="envelope-flap"></div>
+                <span class="flap"></span>
+                <span class="envelope-left"></span>
+                <span class="envelope-right"></span>
+                <span class="envelope-front"></span>
 
-                <div class="wax-seal">
+                <span class="wax-seal">
                     <span>M <i>&</i> D</span>
-                </div>
-            </div>
+                </span>
+            </button>
 
-            <p class="envelope-hint">
-                <span>↓</span>
+            <p class="intro-names">MAQSADBEK & DILAFRUZ</p>
+            <p class="intro-hint">
+                <span class="hint-arrow">↓</span>
                 Taklifnomani ochish uchun bosing
             </p>
+            <p class="intro-footer">WITH LOVE, FOREVER</p>
         </div>
     </section>
 
-    <!-- MOBIL TAKLIFNOMA -->
+    <!-- MUSIQA TUGMASI -->
+    <button class="music-button" id="musicButton"
+            aria-label="Musiqani yoqish yoki to‘xtatish">
+        <span class="music-disc" id="musicDisc">♫</span>
+        <span class="music-label" id="musicLabel">Musiqani yoqish</span>
+    </button>
+
+    <!-- ASOSIY SAYT -->
     <main class="invitation" id="invitation">
 
-        <!-- BOSH SAHIFA -->
+        <!-- HERO -->
         <section class="hero">
             <div class="hero-image"></div>
-            <div class="hero-overlay"></div>
+            <div class="hero-shade"></div>
+            <div class="hero-frame"></div>
 
-            <img src="img/flowers.png" alt="" class="hero-flower">
+            <img src="img/flowers.png" class="hero-flowers"
+                 alt="" aria-hidden="true">
 
             <div class="hero-content">
-                <p class="eyebrow">BISMILLAHIR ROHMANIR ROHIYM</p>
-                <div class="ornament">✦ ───── ✦</div>
+                <div class="hero-top-ornament">✦　❦　✦</div>
+                <p class="hero-kicker">BISMILLAHIR ROHMANIR ROHIYM</p>
 
                 <p class="hero-intro">
-                    Sizni hayotimizdagi eng go‘zal kunimizga
+                    Hayotimizdagi eng go‘zal kunimizga
                 </p>
 
                 <h1>
@@ -77,83 +101,94 @@
                     <span>Dilafruz</span>
                 </h1>
 
-                <p class="hero-subtitle">Ikki qalb, bir taqdir</p>
-                <p class="hero-quote">
-                    Alloh yozgan go‘zal umr yo‘li sari...
+                <div class="hero-divider">
+                    <span></span> ♡ <span></span>
+                </div>
+
+                <p class="hero-tagline">Ikki qalb. Bir muhabbat. Bir taqdir.</p>
+
+                <p class="hero-poem">
+                    Siz bilan go‘zal, siz bilan mazmunli<br>
+                    bo‘lsin hayotimizning har bir lahzasi...
                 </p>
 
                 <div class="hero-date">
-                    <span class="date-line"></span>
-                    <div class="date-content">
-                        <span class="date-day">14</span>
-                        <span class="date-month">Noyabr</span>
-                        <span class="date-year">2026 · SOAT 18:00</span>
+                    <div class="date-side">CHORSHANBA</div>
+                    <div class="date-main">
+                        <span>14</span>
+                        <div>
+                            <b>NOYABR</b>
+                            <small>2026 · 18:00</small>
+                        </div>
                     </div>
-                    <span class="date-line"></span>
+                    <div class="date-side">2026</div>
                 </div>
 
-                <a href="#invitationMessage" class="scroll-link">
-                    TAKLIFNOMANI O‘QISH <span>↓</span>
+                <a href="#message" class="hero-link">
+                    TAKLIFNOMANI OCHISH <span>↓</span>
                 </a>
             </div>
 
-            <span class="hero-bottom-note">M & D · 2026</span>
+            <div class="hero-bottom">
+                <span>M</span>
+                <span class="hero-bottom-line"></span>
+                <span>D</span>
+            </div>
+
+            <span class="side-note">OUR WEDDING DAY · 2026</span>
         </section>
 
-        <!-- TAKLIF MATNI -->
-        <section class="section message-section" id="invitationMessage">
-            <p class="section-kicker">BIZNING BAХTLI KUNIMIZ</p>
-            <div class="section-ornament">❦</div>
+        <!-- TAKLIF -->
+        <section class="section message-section reveal" id="message">
+            <p class="eyebrow">BIZNING ENG GO‘ZAL KUNIMIZ</p>
+            <div class="ornament">❦</div>
 
             <h2>Hurmatli <em>mehmonlar!</em></h2>
 
-            <p class="message-text">
-                Sizni Maqsadbek va Dilafruzning nikoh to‘yining faxriy
-                mehmoni bo‘lishga taklif etamiz. Hayotimizdagi ushbu
-                unutilmas kunimizda biz bilan birga bo‘lib,
-                quvonchimizga sherik bo‘lishingizdan mamnun bo‘lamiz.
+            <p class="message-copy">
+                Sizni Maqsadbek va Dilafruzning nikoh to‘yiga
+                taklif etamiz. Hayotimizdagi ushbu unutilmas
+                kunda biz bilan birga bo‘lib, quvonchimizga
+                sherik bo‘lishingizdan mamnun bo‘lamiz.
+                Tashrifingiz biz uchun katta baxtdir.
+            </p>
+
+            <div class="quote-mark">“</div>
+            <p class="love-quote">
+                Eng go‘zal uchrashuvlar taqdir tomonidan yoziladi.
             </p>
 
             <div class="signature">
-                <span>Samimiy hurmat bilan</span>
-                <strong>Maqsadbek & Dilafruz</strong>
+                <span>Samimiy muhabbat bilan</span>
+                <strong>Maqsadbek <i>&</i> Dilafruz</strong>
                 <span class="signature-heart">♡</span>
             </div>
         </section>
 
-        <!-- ORTGA SANASH -->
+        <!-- COUNTDOWN -->
         <section class="countdown-section">
-            <div class="countdown-decoration">✧</div>
-
-            <p class="section-kicker">BAХTLI KUNIMIZGA</p>
-            <h2>Qancha vaqt <em>qoldi?</em></h2>
-            <p class="countdown-note">
-                Ushbu unutilmas lahzani birgalikda kutamiz
-            </p>
+            <div class="section-corner corner-top">✧</div>
+            <p class="eyebrow light">BIZNING BAХTLI KUNIMIZGA</p>
+            <h2>Hayajonli lahzalargacha<br><em>qancha vaqt qoldi?</em></h2>
+            <p class="countdown-caption">Biz bilan ushbu kunni kuting</p>
 
             <div class="countdown" id="countdown">
-                <div class="time-box">
+                <div class="time-card">
                     <strong id="days">00</strong>
                     <span>KUN</span>
                 </div>
-
                 <i>:</i>
-
-                <div class="time-box">
+                <div class="time-card">
                     <strong id="hours">00</strong>
                     <span>SOAT</span>
                 </div>
-
                 <i>:</i>
-
-                <div class="time-box">
+                <div class="time-card">
                     <strong id="minutes">00</strong>
                     <span>DAQIQA</span>
                 </div>
-
                 <i>:</i>
-
-                <div class="time-box">
+                <div class="time-card">
                     <strong id="seconds">00</strong>
                     <span>SONIYA</span>
                 </div>
@@ -163,312 +198,367 @@
                 Bugun bizning baxtli kunimiz! ♡
             </p>
 
-            <div class="countdown-bottom">✦</div>
+            <div class="countdown-bottom">✦ ───── ♡ ───── ✦</div>
+            <div class="section-corner corner-bottom">✧</div>
         </section>
 
-        <!-- TO‘Y DASTURI -->
-        <section class="section program-section">
-            <p class="section-kicker">TANTANALI OQSHOM</p>
-            <div class="section-ornament">✦</div>
-
+        <!-- DASTUR -->
+        <section class="section program-section reveal">
+            <p class="eyebrow">TANTANALI OQSHOM</p>
+            <div class="ornament">✦</div>
             <h2>To‘y <em>dasturi</em></h2>
             <p class="section-description">
-                Sizni quvonch va unutilmas lahzalarga boy oqshom kutmoqda.
+                Quvonch, muhabbat va unutilmas xotiralarga boy oqshom.
             </p>
 
             <div class="timeline">
                 <article class="timeline-item">
-                    <div class="timeline-time">17:00</div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-info">
+                    <span class="timeline-time">17:00</span>
+                    <span class="timeline-dot"></span>
+                    <div>
                         <h3>Mehmonlarni kutib olish</h3>
                         <p>Samimiy tabassum va iliq kutib olish.</p>
                     </div>
                 </article>
 
                 <article class="timeline-item">
-                    <div class="timeline-time">18:00</div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-info">
+                    <span class="timeline-time">18:00</span>
+                    <span class="timeline-dot"></span>
+                    <div>
                         <h3>Nikoh tantanasi</h3>
-                        <p>Hayotimizning yangi sahifasi boshlanadi.</p>
+                        <p>Yangi hayotimizning go‘zal boshlanishi.</p>
                     </div>
                 </article>
 
                 <article class="timeline-item">
-                    <div class="timeline-time">19:00</div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-info">
+                    <span class="timeline-time">19:00</span>
+                    <span class="timeline-dot"></span>
+                    <div>
                         <h3>Bayram ziyofati</h3>
-                        <p>Yaqinlar davrasida quvonchli lahzalar.</p>
+                        <p>Yaqinlar davrasida baxtli lahzalar.</p>
                     </div>
                 </article>
 
                 <article class="timeline-item">
-                    <div class="timeline-time">20:00</div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-info">
+                    <span class="timeline-time">20:00</span>
+                    <span class="timeline-dot"></span>
+                    <div>
                         <h3>Musiqa va raqs</h3>
-                        <p>Quvonchli lahzalar va go‘zal xotiralar.</p>
+                        <p>Quvonchli onlar va unutilmas xotiralar.</p>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- TO‘Y MANZILI -->
-        <section class="location-section">
+        <!-- MANZIL -->
+        <section class="location-section reveal">
             <div class="location-photo">
-                <img src="img/Maqsad.jpg" alt="Maqsadbek va Dilafruz">
-                <span class="photo-caption">Bizning baxtli kunimiz</span>
+                <img src="img/Maqsad.jpg" alt="Maqsad va Dilafruz">
+                <div class="location-photo-shade"></div>
+                <div class="photo-caption">
+                    <span>Bir umrga</span>
+                    <strong>birga...</strong>
+                </div>
+                <span class="photo-counter">M & D · 2026</span>
             </div>
 
             <div class="location-content">
-                <p class="section-kicker">BIZ BILAN UCHRASHING</p>
-                <div class="section-ornament">⌖</div>
-
+                <p class="eyebrow">SIZNI KUTAMIZ</p>
+                <div class="ornament">⌖</div>
                 <h2>To‘y <em>manzili</em></h2>
 
-                <p class="location-intro">
-                    Ushbu unutilmas kunimizni birgalikda nishonlash
-                    uchun sizni intiqlik bilan kutamiz.
+                <p class="section-description">
+                    Baxtimizga sherik bo‘lish uchun sizni
+                    intiqlik bilan kutamiz.
                 </p>
 
-                <div class="location-details">
+                <div class="detail-card">
                     <span class="detail-icon">⌖</span>
                     <div>
+                        <small>MANZIL</small>
                         <strong>Uchqunbek to'yxonasi</strong>
-                        <p>O‘zbekiston, Xorazm viloyati, Bog‘ot tumani</p>
+                        <p>Xorazm viloyati, Bog‘ot tumani, Jdanov</p>
                     </div>
                 </div>
 
-                <div class="location-details">
+                <div class="detail-card">
                     <span class="detail-icon">◷</span>
                     <div>
+                        <small>SANA VA VAQT</small>
                         <strong>14-noyabr, 2026-yil</strong>
                         <p>Soat 18:00 da</p>
                     </div>
                 </div>
 
-                <a class="map-button"
-                   href="https://maps.app.goo.gl/ukC4foEtwVUwcJEXA"
-                   target="_blank" rel="noopener">
-                    XARITADA KO‘RISH <span>↗</span>
+                <a href="https://maps.app.goo.gl/3U56H2LTW5WsgREV7" target="_blank"
+                   rel="noopener noreferrer" class="map-button">
+                    <span>XARITADA KO‘RISH</span>
+                    <b>↗</b>
                 </a>
             </div>
         </section>
 
-        <!-- 5 TA SURATLI FOTOALBOM -->
-        <section class="section gallery-section">
-            <p class="section-kicker">BIZNING XOTIRALARIMIZ</p>
-            <div class="section-ornament">❦</div>
-
+        <!-- FOTOALBOM -->
+        <section class="section gallery-section reveal">
+            <p class="eyebrow">BIZNING XOTIRALARIMIZ</p>
+            <div class="ornament">❦</div>
             <h2>Sevgi <em>lavhalari</em></h2>
             <p class="section-description">
-                Baxtli kunlarimizdan kichik xotiralar.
+                Har bir suratda o‘ziga xos bir xotira.
             </p>
 
-            <div class="photo-grid">
-                <button class="photo-item photo-large" type="button"
+            <div class="gallery-grid">
+                <button class="gallery-item gallery-large"
                         data-full="img/photo1.jpg"
-                        aria-label="Birinchi suratni kattalashtirish">
-                    <img src="img/photo1.jpg" alt="Maqsad va Dilafruz — 1"
-                         loading="lazy">
-                    <span class="photo-number">01</span>
-                    <span class="photo-overlay">♡</span>
+                        aria-label="Birinchi suratni ko‘rish">
+                    <img src="img/photo1.jpg" alt="Sevgi lavhasi 1" loading="lazy">
+                    <span>01 <i>♡</i></span>
                 </button>
 
-                <button class="photo-item" type="button"
+                <button class="gallery-item"
                         data-full="img/photo2.jpg"
-                        aria-label="Ikkinchi suratni kattalashtirish">
-                    <img src="img/photo2.jpg" alt="Maqsad va Dilafruz — 2"
-                         loading="lazy">
-                    <span class="photo-number">02</span>
-                    <span class="photo-overlay">♡</span>
+                        aria-label="Ikkinchi suratni ko‘rish">
+                    <img src="img/photo2.jpg" alt="Sevgi lavhasi 2" loading="lazy">
+                    <span>02 <i>♡</i></span>
                 </button>
 
-                <button class="photo-item" type="button"
+                <button class="gallery-item"
                         data-full="img/photo3.jpg"
-                        aria-label="Uchinchi suratni kattalashtirish">
-                    <img src="img/photo3.jpg" alt="Maqsad va Dilafruz — 3"
-                         loading="lazy">
-                    <span class="photo-number">03</span>
-                    <span class="photo-overlay">♡</span>
+                        aria-label="Uchinchi suratni ko‘rish">
+                    <img src="img/photo3.jpg" alt="Sevgi lavhasi 3" loading="lazy">
+                    <span>03 <i>♡</i></span>
                 </button>
-                <button class="photo-item" type="button"
+                <button class="gallery-item"
                         data-full="img/photo3.jpg"
-                        aria-label="Uchinchi suratni kattalashtirish">
-                    <img src="img/photo3.jpg" alt="Maqsad va Dilafruz — 3"
-                         loading="lazy">
-                    <span class="photo-number">03</span>
-                    <span class="photo-overlay">♡</span>
+                        aria-label="Uchinchi suratni ko‘rish">
+                    <img src="img/photo3.jpg" alt="Sevgi lavhasi 3" loading="lazy">
+                    <span>03 <i>♡</i></span>
                 </button>
 
-                <button class="photo-item" type="button"
+                <button class="gallery-item"
                         data-full="img/photo4.jpg"
-                        aria-label="To‘rtinchi suratni kattalashtirish">
-                    <img src="img/photo4.jpg" alt="Maqsad va Dilafruz — 4"
-                         loading="lazy">
-                    <span class="photo-number">04</span>
-                    <span class="photo-overlay">♡</span>
+                        aria-label="To‘rtinchi suratni ko‘rish">
+                    <img src="img/photo4.jpg" alt="Sevgi lavhasi 4" loading="lazy">
+                    <span>04 <i>♡</i></span>
                 </button>
 
-                <button class="photo-item photo-wide" type="button"
+                <button class="gallery-item gallery-wide"
                         data-full="img/photo5.jpg"
-                        aria-label="Beshinchi suratni kattalashtirish">
-                    <img src="img/photo5.jpg" alt="Maqsad va Dilafruz — 5"
-                         loading="lazy">
-                    <span class="photo-number">05</span>
-                    <span class="photo-overlay">♡</span>
+                        aria-label="Beshinchi suratni ko‘rish">
+                    <img src="img/photo5.jpg" alt="Sevgi lavhasi 5" loading="lazy">
+                    <span>05 <i>♡</i></span>
                 </button>
             </div>
 
             <p class="gallery-note">Har bir lahza — bir umrga xotira.</p>
         </section>
 
-        <!-- YAKUNIY BO‘LIM -->
+        <!-- YAKUNIY SAHIFA -->
         <footer class="footer">
-            <img src="img/flowers.png" alt="" class="footer-flower">
+            <img src="img/flowers.png" alt="" class="footer-flowers">
 
-            <div class="footer-ornament">✦ ─── ♡ ─── ✦</div>
-            <p class="section-kicker">BIZNING BAХTLI KUNIMIZ</p>
+            <div class="footer-ornament">✦ ── ♡ ── ✦</div>
+            <p class="eyebrow light">BIZNING BAХTLI KUNIMIZ</p>
 
             <h2>Sizni <em>kutamiz!</em></h2>
-
-            <p class="footer-message">
-                Ushbu unutilmas kunimizda biz bilan birga bo‘ling.
-                Tashrifingiz va duolaringiz biz uchun katta baxt.
+            <p class="footer-copy">
+                Tashrifingiz, samimiy tilaklaringiz va duolaringiz
+                biz uchun eng go‘zal sovg‘adir.
             </p>
 
-            <div class="footer-divider"></div>
-
-            <div class="footer-names">
-                Maqsadbek <span>&</span> Dilafruz
-            </div>
-
+            <div class="footer-line"></div>
+            <div class="footer-names">Maqsadbek <i>&</i> Dilafruz</div>
             <div class="footer-date">14 · 11 · 2026</div>
-            <div class="footer-heart">♡</div>
-            <p class="footer-small">MUHABBAT BILAN YARATILDI</p>
-        </footer>
 
+            <div class="footer-heart">♡</div>
+            <p class="footer-bottom">MAHABBAT BILAN YARATILDI</p>
+        </footer>
     </main>
 
-    <!-- SURATNI KATTALASHTIRISH -->
+    <!-- FOTO LIGHTBOX -->
     <div class="lightbox" id="lightbox" aria-hidden="true">
         <button class="lightbox-close" id="lightboxClose"
-                type="button" aria-label="Yopish">×</button>
-        <img id="lightboxImage" src="" alt="Kattalashtirilgan surat">
+                aria-label="Yopish">×</button>
+        <button class="lightbox-prev" id="lightboxPrev"
+                aria-label="Oldingi surat">‹</button>
+        <img id="lightboxImage" src="" alt="Katta surat">
+        <button class="lightbox-next" id="lightboxNext"
+                aria-label="Keyingi surat">›</button>
+        <p class="lightbox-count" id="lightboxCount"></p>
     </div>
 
     <script>
-        // Konvertni ochish
-        const envelopeScreen = document.getElementById("envelopeScreen");
-        const envelopeScene = document.getElementById("envelopeScene");
-        const envelope = document.getElementById("envelope");
+        // KONVERTNI OCHISH
+        const introScreen = document.getElementById("introScreen");
+        const introContent = document.getElementById("introContent");
+        const envelopeButton = document.getElementById("openEnvelope");
         const invitation = document.getElementById("invitation");
 
-        let isOpened = false;
+        const music = document.getElementById("weddingMusic");
+        const musicButton = document.getElementById("musicButton");
+        const musicLabel = document.getElementById("musicLabel");
+        const musicDisc = document.getElementById("musicDisc");
 
-        function openInvitation() {
-            if (isOpened) return;
-            isOpened = true;
+        let opened = false;
 
-            envelope.classList.add("opened");
-            envelopeScene.classList.add("scene-opened");
-
-            setTimeout(() => {
-                envelopeScreen.classList.add("screen-hidden");
-                invitation.classList.add("invitation-visible");
-            }, 1100);
-
-            setTimeout(() => {
-                envelopeScreen.style.display = "none";
-            }, 2000);
+        async function playMusic() {
+            try {
+                await music.play();
+                musicButton.classList.add("music-playing");
+                musicLabel.textContent = "Musiqa ijro etilmoqda";
+                musicDisc.textContent = "♫";
+            } catch (error) {
+                musicLabel.textContent = "Musiqani yoqish";
+            }
         }
 
-        envelope.addEventListener("click", openInvitation);
+        function updateMusicButton() {
+            const playing = !music.paused;
+            musicButton.classList.toggle("music-playing", playing);
+            musicLabel.textContent = playing
+                ? "Musiqani to‘xtatish"
+                : "Musiqani yoqish";
+        }
 
-        envelope.addEventListener("keydown", function(event) {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                openInvitation();
-            }
+        envelopeButton.addEventListener("click", async () => {
+            if (opened) return;
+            opened = true;
+
+            envelopeButton.classList.add("envelope-opened");
+            introContent.classList.add("intro-exit");
+
+            // Foydalanuvchi bosgan paytda musiqani ishga tushirishga urinish
+            playMusic();
+
+            setTimeout(() => {
+                introScreen.classList.add("intro-hidden");
+                invitation.classList.add("invitation-visible");
+                musicButton.classList.add("music-visible");
+                document.body.classList.add("site-opened");
+            }, 900);
+
+            setTimeout(() => {
+                introScreen.style.display = "none";
+            }, 1800);
         });
 
+        musicButton.addEventListener("click", async () => {
+            if (music.paused) {
+                await playMusic();
+            } else {
+                music.pause();
+            }
+            updateMusicButton();
+        });
+
+        music.addEventListener("play", updateMusicButton);
+        music.addEventListener("pause", updateMusicButton);
+
         // TO‘Y SANASI
-        // Oy 0 dan boshlanadi: 8 = sentabr
+        // JavaScript oylarni 0 dan sanaydi: 8 = sentabr.
         const weddingDate = new Date(2026, 10, 14, 18, 0, 0);
 
         function updateCountdown() {
-            const now = new Date();
-            const difference = weddingDate.getTime() - now.getTime();
+            const difference = weddingDate.getTime() - Date.now();
+
+            const ids = ["days", "hours", "minutes", "seconds"];
 
             if (difference <= 0) {
-                document.getElementById("days").textContent = "00";
-                document.getElementById("hours").textContent = "00";
-                document.getElementById("minutes").textContent = "00";
-                document.getElementById("seconds").textContent = "00";
+                ids.forEach(id => {
+                    document.getElementById(id).textContent = "00";
+                });
                 document.getElementById("countdownFinished").hidden = false;
                 return;
             }
 
-            const days = Math.floor(
-                difference / (1000 * 60 * 60 * 24)
-            );
-            const hours = Math.floor(
-                (difference / (1000 * 60 * 60)) % 24
-            );
-            const minutes = Math.floor(
-                (difference / (1000 * 60)) % 60
-            );
-            const seconds = Math.floor(
-                (difference / 1000) % 60
-            );
+            const values = [
+                Math.floor(difference / 86400000),
+                Math.floor(difference / 3600000) % 24,
+                Math.floor(difference / 60000) % 60,
+                Math.floor(difference / 1000) % 60
+            ];
 
-            document.getElementById("days").textContent =
-                String(days).padStart(2, "0");
-            document.getElementById("hours").textContent =
-                String(hours).padStart(2, "0");
-            document.getElementById("minutes").textContent =
-                String(minutes).padStart(2, "0");
-            document.getElementById("seconds").textContent =
-                String(seconds).padStart(2, "0");
+            ids.forEach((id, index) => {
+                document.getElementById(id).textContent =
+                    String(values[index]).padStart(2, "0");
+            });
         }
 
         updateCountdown();
         setInterval(updateCountdown, 1000);
 
-        // FOTOALBOM LIGHTBOX
+        // SCROLL PAYTIDA ELEMENTLARNI CHIQARISH
+        const revealElements = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("revealed");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            revealElements.forEach(element => observer.observe(element));
+        } else {
+            revealElements.forEach(element =>
+                element.classList.add("revealed")
+            );
+        }
+
+        // FOTOALBOM VA LIGHTBOX
+        const galleryItems = [...document.querySelectorAll(".gallery-item")];
         const lightbox = document.getElementById("lightbox");
         const lightboxImage = document.getElementById("lightboxImage");
-        const lightboxClose = document.getElementById("lightboxClose");
+        const lightboxCount = document.getElementById("lightboxCount");
+        let currentPhoto = 0;
 
-        document.querySelectorAll(".photo-item").forEach(function(item) {
-            item.addEventListener("click", function() {
-                lightboxImage.src = item.dataset.full;
-                lightbox.classList.add("lightbox-visible");
-                lightbox.setAttribute("aria-hidden", "false");
-                document.body.classList.add("lightbox-open");
-            });
-        });
+        function showPhoto(index) {
+            currentPhoto = (index + galleryItems.length) % galleryItems.length;
+            lightboxImage.src = galleryItems[currentPhoto].dataset.full;
+            lightboxCount.textContent =
+                String(currentPhoto + 1).padStart(2, "0") +
+                " / " + String(galleryItems.length).padStart(2, "0");
+        }
 
-        function closeLightbox() {
+        function openPhoto(index) {
+            showPhoto(index);
+            lightbox.classList.add("lightbox-visible");
+            lightbox.setAttribute("aria-hidden", "false");
+            document.body.classList.add("lightbox-open");
+        }
+
+        function closePhoto() {
             lightbox.classList.remove("lightbox-visible");
             lightbox.setAttribute("aria-hidden", "true");
             document.body.classList.remove("lightbox-open");
             lightboxImage.src = "";
         }
 
-        lightboxClose.addEventListener("click", closeLightbox);
-
-        lightbox.addEventListener("click", function(event) {
-            if (event.target === lightbox) {
-                closeLightbox();
-            }
+        galleryItems.forEach((item, index) => {
+            item.addEventListener("click", () => openPhoto(index));
         });
 
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "Escape") {
-                closeLightbox();
+        document.getElementById("lightboxClose")
+            .addEventListener("click", closePhoto);
+
+        document.getElementById("lightboxPrev")
+            .addEventListener("click", () => showPhoto(currentPhoto - 1));
+
+        document.getElementById("lightboxNext")
+            .addEventListener("click", () => showPhoto(currentPhoto + 1));
+
+        lightbox.addEventListener("click", event => {
+            if (event.target === lightbox) closePhoto();
+        });
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") closePhoto();
+
+            if (lightbox.classList.contains("lightbox-visible")) {
+                if (event.key === "ArrowRight") showPhoto(currentPhoto + 1);
+                if (event.key === "ArrowLeft") showPhoto(currentPhoto - 1);
             }
         });
     </script>
